@@ -18,7 +18,7 @@ class App extends Component {
       return todo.id !== id;
     });
     this.setState({
-      // update the state to the new todos array
+      // update the state to the new todos array, all todos that returned true because the ids didnt match
       todos: todos
     });
   }
@@ -28,7 +28,7 @@ class App extends Component {
     // we then take the newly submitted todo and add it to the end of the list (array)
     let todos = [...this.state.todos, todo];
     this.setState({
-      // set the state to the new todos array
+      // set the state to the new todos array, with the added todo item
       todos: todos
     });
   };
